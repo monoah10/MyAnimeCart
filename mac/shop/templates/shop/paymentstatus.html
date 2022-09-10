@@ -1,0 +1,20 @@
+{% extends 'shop/base.html' %}
+{% block title%} My Anime Cart Tracker{% endblock %}
+{% block body %}
+<div class="container">
+    <div class="col my-4">
+        <h2>Payment Status Regarding Your Order ID :-<span style="color:blue;"> {{response.ORDERID}}<span></h2>
+        {% if response.RESPCODE == '01' %}
+        <h1><span style="color: green;">ORDER SUCCESSFULL<span> &#10004</h1>
+        {% else %}
+        <h1><span style="color:red;">ORDER FAILURE <span> &#10060</h1>
+        {% endif%}
+
+    </div>
+
+</div>
+{% endblock %}
+{% block js %}
+<script>
+</script>
+{% endblock %}
